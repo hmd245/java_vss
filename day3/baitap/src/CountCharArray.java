@@ -6,13 +6,14 @@ public class CountCharArray {
 //        String[] arr = {"a", "b", "b",  "c"};
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter kich thuoc mang: ");
+        System.out.print("Nhap kich thuoc mang: ");
         int size = scanner.nextInt();
+        scanner.nextLine();
 
         String[] arr = new String[size];
         int i = 0;
         while ( i < arr.length) {
-            System.out.print("Enter element " + (i + 1) + ": ");
+            System.out.print("Nhap phan tu " + (i + 1) + ": ");
             arr[i] = scanner.nextLine();
             i++;
         }
@@ -24,7 +25,9 @@ public class CountCharArray {
 
         //Nhap vao ky tu can dem
         i = 0;
-        String c = "b";
+        //String c = "b";
+        System.out.print("\nNhap ki tu can dem: ");
+        String c = scanner.nextLine();
         int count = 0;
         for (i = 0; i < arr.length; i++) {
             if (c.equals(arr[i]) ) {
