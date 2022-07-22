@@ -12,7 +12,7 @@ public class DeleteArray {
         System.out.printf("Enter a size array: ");
         size = scanner.nextInt();
 
-        // nhap gia tri cho cac phan tu cua mang
+        // nhap gia tri cho cac phan tu cua mang 10 4 6 7 8 6 0 0 0 0
         array = new int[size];
         int i = 0;
         while (i < array.length) {
