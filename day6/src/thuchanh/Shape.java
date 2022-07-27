@@ -4,12 +4,12 @@ public class Shape {
     private String color = "green";
     private boolean filled = true;
 
-    // Contructor không tham số
+    // Constructor không tham số
     public Shape() {
 
     }
 
-    // Contructor có 2 tham số truyền vào
+    // Constructor có 2 tham số truyền vào
     public Shape(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
