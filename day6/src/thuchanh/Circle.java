@@ -26,6 +26,7 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
+    //!!???? getArea dung this.radius hay radius
     public double getArea() {
         return radius * radius * Math.PI;
     }

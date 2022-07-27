@@ -40,7 +40,7 @@ public class Shape {
         return "A Shape with color of "
                 + getColor()
                 + " and "
-                + (isFilled()? "filled" : "not filled");
+                + (isFilled() ? "filled" : "not filled");
     }
 
 
