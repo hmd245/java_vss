@@ -1,5 +1,7 @@
 package baitap.bai1;
 
+import baitap.bai1d7.Circle;
+
 public class Cylinder extends Circle {
     // add height attribute
     private double height = 1.0;
