@@ -17,6 +17,8 @@ public class Main {
         studentMap.put(2,student2);
         studentMap.put(3,student3);
         studentMap.put(4,student1);
+        studentMap.put(4,student2);
+        System.out.println(studentMap);
 
         for(Map.Entry<Integer, Student> student : studentMap.entrySet()){
             System.out.println(student.toString());

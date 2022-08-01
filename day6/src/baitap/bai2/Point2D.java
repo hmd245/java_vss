@@ -26,7 +26,6 @@ public class Point2D {
     // Getters, setters
     public float getX() {
         return this.x;
-        //return x; Cach su dung this ////////////////!!!!!!!!!!!????
     }
 
     public void setX(float x) {
@@ -34,7 +33,7 @@ public class Point2D {
     }
 
     public float getY() {
-        return  this.y;
+        return this.y;
     }
 
     public void setY(float y) {
@@ -51,7 +50,7 @@ public class Point2D {
         float[] arr = new float[2];
         arr[0] = x;
         arr[1] = y;
-        return  arr;
+        return arr;
     }
 
     @Override

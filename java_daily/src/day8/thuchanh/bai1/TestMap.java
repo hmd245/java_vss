@@ -14,11 +14,15 @@ public class TestMap {
         hashMap.put("Anderson", 31);
         hashMap.put("Lewis", 29);
         hashMap.put("Cook", 29);
+        hashMap.put("Cook", 28);
         System.out.println("Display entries in HashMap");
         System.out.println(hashMap + "\n");
 
         // Tạo TreeMap trong main để lưu key theo thứ tự giảm dần
-        Map<String, Integer> treeMap = new TreeMap<>(hashMap);
+        Map<Integer, Integer> treeMap = new TreeMap<>();
+        treeMap.put(8,3);
+        treeMap.put(9,3);
+        treeMap.put(7,3);
         System.out.println("Display entries in ascending order of key");
         System.out.println(treeMap);
 
