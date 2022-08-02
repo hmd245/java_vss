@@ -1,5 +1,6 @@
 package kiemtra2v2.controller;
 
+import kiemtra2.StudentModel;
 import kiemtra2v2.model.HocSinh;
 import kiemtra2v2.model.LopHoc;
 
@@ -15,6 +16,15 @@ public class StudentController {
 //    LopHoc lopHoc1 = new LopHoc("1A", "Nguyễn Thị Huyền");
 //    LopHoc lopHoc2 = new LopHoc("1B", "Nguyễn Thị Thơm");
 //    LopHoc lopHoc3 = new LopHoc("1C", "Nguyễn Thị Lan");
+
+    List<HocSinh> hocSinhList = new ArrayList<>();
+
+    // ???
+    public void findAll(){
+        for (HocSinh i : hocSinhList){
+            System.out.println(i.toString());
+        }
+    }
 
     // constructor
     public StudentController() {
@@ -41,12 +51,12 @@ public class StudentController {
     }
 
     // them hoc sinh vao lop
-    public void addStudent() {
+    public void addStudent(LopHoc lopHoc) {
         String name = inputName();
         String birthDay = inputBirthday();
         HocSinh hocSinh = new HocSinh(name, birthDay);
-        //lopHoc1.add(hocSinh);
+        hocSinhList.add(hocSinh);
+        //System.out.println(hocSinhList);
     }
-
 
 }

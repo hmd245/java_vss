@@ -38,4 +38,13 @@ public class HocSinh {
     public void setNgaySinh(Date ngaySinh) {
         this.ngaySinh = ngaySinh;
     }
+
+    @Override
+    public String toString() {
+        return "HocSinh{" +
+                "id= " + id +
+                ", hoTen='" + hoTen + '\'' +
+                ", ngaySinh=" + ngaySinh +
+                '}';
+    }
 }

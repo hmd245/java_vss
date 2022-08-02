@@ -1,7 +1,6 @@
 package kiemtra2v2.view;
 
-import kiemtra2.StudentController;
-import kiemtra2.StudentModel;
+import kiemtra2v2.controller.StudentController;
 import kiemtra2v2.model.LopHoc;
 
 import java.util.ArrayList;
@@ -9,7 +8,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    //
     public static Scanner scanner = new Scanner(System.in);
 
 
@@ -48,16 +46,17 @@ public class Main {
 
         String choose = null;
         boolean exit = false;
-        StudentController studentManager = new StudentController();
+        StudentController students = new StudentController();
 
         showMenu();
         while (true) {
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
+                    students.addStudent(lopHoc1);
+                    students.findAll();
                     break;
                 case "2":
-
                     break;
                 case "3":
 
