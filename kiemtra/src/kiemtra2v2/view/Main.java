@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
 
-
     public static void showMenu() {
         System.out.println("-----------menu------------");
         System.out.println("1. Nhap hoc sinh vao cac lop");
