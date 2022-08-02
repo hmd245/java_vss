@@ -1,8 +1,8 @@
-package day8.exam2.view;
+package exam2.view;
 
 
-import day8.exam2.controller.StudentController;
-import day8.exam2.model.Student;
+import exam2.controller.StudentController;
+import exam2.model.Student;
 
 
 

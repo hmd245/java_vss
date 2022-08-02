@@ -1,14 +1,13 @@
-package day8.exam2.controller;
+package exam2.controller;
 
 
-import day8.exam2.model.Student;
+import exam2.model.Student;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class StudentController {
     //them hoc sinh
-    public ArrayList<Student> add(ArrayList<Student> list,Student student){
+    public ArrayList<Student> add(ArrayList<Student> list, Student student){
         System.out.println("them sinh vien :");
         list.add(student);
         return list;

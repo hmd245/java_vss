@@ -1,4 +1,4 @@
-package day8.exam2.model;
+package exam2.model;
 
 public class Student {
     private static int  idIncreament = 0;
