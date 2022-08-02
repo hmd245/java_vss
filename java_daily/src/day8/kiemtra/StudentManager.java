@@ -8,23 +8,19 @@ public class StudentManager {
     public static Scanner scanner = new Scanner(System.in);
     //private List<Student> studentList ;
     List<Student> studentList = new ArrayList<Student>();
-    Student student1 = new Student(1, "Duc", 22);
 
+    //Student student1 = new Student(1, "Duc", 22);
 
     // Them hoc sinh vao studentList
     public void add() {
-        //int id = (studentList.size() > 0) ? (studentList.size() + 1) : 1;
-        //System.out.println("student id = " + id);
-        int id = inputId();
+        int id = (studentList.size() > 0) ? (studentList.size() + 1) : 1;
+        System.out.println("student id = " + id);
 
-        //String name = scanner.nextLine();
         String name = inputName();
-        //int age = scanner.nextInt();
         int age = inputAge();
 
         Student student = new Student(id, name, age );
-        //studentList.add(student);
-        studentList.add(student1);
+        //studentList.add(student1);
         studentList.add(student);
     }
 
@@ -63,35 +59,20 @@ public class StudentManager {
     // Nhap diem va ghi file
 
 
-
-
     // Hien thi danh sach sinh vien
     public void show() {
         for (Student student : studentList) {
-            System.out.format("%5d | ", student.getId());
-            System.out.format("%20s | ", student.getName());
+            System.out.format("%20s | ", student.getName() + student.getId());
             System.out.format("%5d | ", student.getAge());
             System.out.println("");
         }
     }
 
 
-    // nhap id
-    public int inputId() {
-        System.out.print("Input student id: ");
-        while (true) {
-            try {
-                int id = Integer.parseInt((scanner.nextLine()));
-                return id;
-            } catch (NumberFormatException ex) {
-                System.out.print("invalid! Input student id again: ");
-            }
-        }
-    }
-
     // nhap name
     private String inputName() {
         System.out.print("Input student name: ");
+        scanner.nextLine(); // để bắt kí tự enter bị thừa
         return scanner.nextLine();
     }
 
@@ -102,13 +83,13 @@ public class StudentManager {
     }
 
     // getter && setter
-    public List<Student> getStudentList() {
-        return studentList;
-    }
-
-    public void setStudentList(List<Student> studentList) {
-        this.studentList = studentList;
-    }
+//    public List<Student> getStudentList() {
+//        return studentList;
+//    }
+//
+//    public void setStudentList(List<Student> studentList) {
+//        this.studentList = studentList;
+//    }
 
 
 

@@ -18,6 +18,9 @@
       <sourceFolder url="file://$MODULE_DIR$/../../java_daily" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../java_daily/src" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../../kiemtra">
+      <sourceFolder url="file://$MODULE_DIR$/../../kiemtra/src" isTestSource="false" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

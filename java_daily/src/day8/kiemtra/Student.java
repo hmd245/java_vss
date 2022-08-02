@@ -4,12 +4,13 @@ package day8.kiemtra;
 
 public class Student implements Comparable <Student> {
     // property
-    private int id;
+    private int id = 1;
     private String name;
     private int age;
 
     // constructor
     public Student() {
+        id++;
 
     }
 
