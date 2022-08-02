@@ -5,22 +5,6 @@
     <content url="file://$MODULE_DIR$/../../day4">
       <sourceFolder url="file://$MODULE_DIR$/../../day4/baitap/src" isTestSource="false" />
     </content>
-    <content url="file://$MODULE_DIR$/../../day5">
-      <sourceFolder url="file://$MODULE_DIR$/../../day5/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../day6">
-      <sourceFolder url="file://$MODULE_DIR$/../../day6/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../day7">
-      <sourceFolder url="file://$MODULE_DIR$/../../day7/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../java_daily">
-      <sourceFolder url="file://$MODULE_DIR$/../../java_daily" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../java_daily/src" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../kiemtra">
-      <sourceFolder url="file://$MODULE_DIR$/../../kiemtra/src" isTestSource="false" />
-    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

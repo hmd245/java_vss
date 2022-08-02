@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/day2/bai tap/Snt nho hon 100/Snt nho hon 100.iml" filepath="$PROJECT_DIR$/day2/bai tap/Snt nho hon 100/Snt nho hon 100.iml" />
       <module fileurl="file://$PROJECT_DIR$/day1/bai tap/bai tap.iml" filepath="$PROJECT_DIR$/day1/bai tap/bai tap.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day3/baitap/baitap.iml" filepath="$PROJECT_DIR$/day3/baitap/baitap.iml" />
       <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/body_mass_index/body_mass_index.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/body_mass_index/body_mass_index.iml" />
       <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/count_date_in_month/count_date_in_month.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/count_date_in_month/count_date_in_month.iml" />
       <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/declare_operator/declare_operator.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/declare_operator/declare_operator.iml" />
