@@ -5,7 +5,7 @@ import exam2.controller.StudentController;
 import exam2.model.Student;
 
 
-
+// abc
 
 import java.util.*;
 
@@ -34,7 +34,7 @@ public class Main {
             System.out.println("4: sap xep hoc sinh theo ten :");
             System.out.println("5 : sap xep hoc sinh theo ngay sinh :");
 
-            System.out.println("nhap lua chon");
+            System.out.println("Nhap lua chon: ");
             run = scanner.nextInt();
             switch (run ){
                 case 1:
