@@ -1,6 +1,9 @@
-package baitap.bai1;
+package baitap.bai1v1;
 
-public class TestProductManager {
+import baitap.bai1.Product;
+import baitap.bai1.ProductManager;
+
+public class Main {
 
     public static void printProducts(ProductManager list) {
         list.displayProduct();

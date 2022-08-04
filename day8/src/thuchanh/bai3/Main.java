@@ -16,9 +16,12 @@ public class Main {
         lists.add(student1);
         lists.add(student2);
         lists.add(student3);
+        System.out.println("Test in ra lists: "+ lists);
+
         Collections.sort(lists);
         for(Student st : lists){
             System.out.println(st.toString());
+            //System.out.println("test in ra st: " + st);
         }
 
         AgeComparator ageComparator = new AgeComparator();

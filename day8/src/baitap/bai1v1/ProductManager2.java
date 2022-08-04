@@ -1,17 +1,20 @@
-package baitap.bai1;
+package baitap.bai1v1;
 
-
-//Bước 2: Xây dựng lớp ProductManager
-//gồm các phương thức thêm, sửa, xoá, hiển thị, tìm kiếm, sắp xếp.
+import baitap.bai1.PriceComparator;
+import baitap.bai1.Product;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 
-public class ProductManager {
+//Bước 2: Xây dựng lớp ProductManager
+//gồm các phương thức thêm, sửa, xoá, hiển thị, tìm kiếm, sắp xếp.
+
+public class ProductManager2 {
 
     // Khai báo ArrayList để lưu danh sách sản phẩm.
-    ArrayList<Product> products = new ArrayList<>();
+    LinkedList<Product> products = new LinkedList<>();
 
     // Them san pham
     public void addProduct(Product pro) {

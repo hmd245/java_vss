@@ -36,13 +36,23 @@ public class Student implements Comparable <Student> {
         this.address = address;
     }
 
+//    @Override
+//    public String toString() {
+//        return "Student{" +
+//                "name='" + name + '\'' +
+//                '}';
+//    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
                 '}';
     }
 
+    //
     @Override
     public int compareTo(Student student) {
         return this.getName().compareTo(student.getName());
