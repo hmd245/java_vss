@@ -25,10 +25,10 @@ public class StudentController implements interfaceStudent {
     }
 
     // check is number !!!!!!!!!!!!!
+
     ClassRoom room1 = new ClassRoom("1A", "Nguyen Thi Huyen");
     ClassRoom room2 = new ClassRoom("1B", "Nguyen Thi Thom");
     ClassRoom room3 = new ClassRoom("1C", "Nguyen Thi Lan");
-
 
     @Override
     public void enterStudent() {
@@ -137,7 +137,7 @@ public class StudentController implements interfaceStudent {
                         student.setClassRoom(classRoomList.get(1));
                         break;
                     case 3:
-                        student.setClassRoom(classRoomList.get(3));
+                        student.setClassRoom(classRoomList.get(2));
                         break;
                     default:
                         System.out.println("Lua chon khong hop le");

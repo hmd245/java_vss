@@ -23,6 +23,7 @@ public class ClassRoom {
 
     // getters, setters
     public int getIdClass() {
+        //System.out.println(idClass);
         return idClass;
     }
 
