@@ -27,8 +27,10 @@ public class Main implements Serializable{
         students.add(new Student(3, "Đặng Huy Hoà", "Đà Nẵng"));
         students.add(new Student(4, "Nguyễn Khánh Tùng", "Hà Nội"));
         students.add(new Student(5, "Nguyễn Khắc Nhật", "Hà Nội"));
+
         writeToFile("D:\\workplace\\java_fresher\\java_vss\\day10\\src\\thuchanh10\\bai2\\student.txt", students);
         List<Student> studentDataFromFile = readDataFromFile("D:\\workplace\\java_fresher\\java_vss\\day10\\src\\thuchanh10\\bai2\\student.txt");
+
         for (Student student : studentDataFromFile){
             System.out.println(student);
         }
