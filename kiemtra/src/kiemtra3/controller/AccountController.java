@@ -51,8 +51,10 @@ public class AccountController {
                     sortAccountByName();
                     break;
                 case 7:
+                    deductionAccount();
                     break;
                 case 8:
+                    addMoney();
                     break;
                 case 0:
                     System.out.println("exited!");
@@ -202,9 +204,7 @@ public class AccountController {
         String name = scanner.nextLine();
 
         for (int i = 0; i < accountList.size(); i++) {
-            System.out.println(accountList.get(i).getId());
-            System.out.println(accountList.get(i).getFullName());
-
+            //System.out.println(accountList.get(i).getFullName());
             if (accountList.get(i).getFullName().equalsIgnoreCase(name)) {
                 System.out.println("Ket qua tim search1: " + accountList.get(i));
             }
@@ -217,8 +217,42 @@ public class AccountController {
     }
 
     // 7. Chức năng trừ tiền, check tiền trong tài khoản có đủ không?
+    public void deductionAccount() {
+        System.out.println("Nhap ten account can tru tien: ");
+        scanner.nextLine();
+        String name = scanner.nextLine();
+
+        for (int i = 0; i < accountList.size(); i++) {
+            if (accountList.get(i).getFullName().equalsIgnoreCase(name)) {
+                System.out.println("Nhap so tien muon tru: ");
+                Double deduction = scanner.nextDouble();
+                Double newAmount = accountList.get(i).getAmount() - deduction;
+                accountList.get(i).setAmount(newAmount);
+                System.out.println("Da tru tien account thanh cong");
+                getAccountInfo();
+            }
+        }
+    }
+
     // 8. Chức năng cộng tiền (đưa vào AccountHistory).
     //      (Lưu tất cả thông tin vào file) (xử lý synchronized)
+    public void addMoney() {
+        System.out.println("Nhap ten account can cong tien: ");
+        scanner.nextLine();
+        String name = scanner.nextLine();
+
+        for (int i = 0; i < accountList.size(); i++) {
+            if (accountList.get(i).getFullName().equalsIgnoreCase(name)) {
+                System.out.println("Nhap so tien muon cong: ");
+                Double addAmount = scanner.nextDouble();
+                Double newAmount = accountList.get(i).getAmount() + addAmount;
+                accountList.get(i).setAmount(newAmount);
+                System.out.println("Da cong tien account thanh cong");
+                getAccountInfo();
+            }
+        }
+
+    }
 
 
 }

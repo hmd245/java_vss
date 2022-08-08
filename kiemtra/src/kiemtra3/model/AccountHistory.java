@@ -2,6 +2,7 @@ package kiemtra3.model;
 
 public class AccountHistory {
     // property
+    static int create;
     private int ID;
     private int accountId;
     boolean type;
@@ -10,10 +11,10 @@ public class AccountHistory {
 
     // constructor
     public AccountHistory() {
+        ID = create++;
     }
 
     // getter, setter
-
     public int getID() {
         return ID;
     }
