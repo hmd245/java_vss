@@ -20,7 +20,6 @@ public class AccountController {
     List<AccountHistory> accountHistoryList = new ArrayList<AccountHistory>();
 
     // constructor
-
     public AccountController() {
     }
 
@@ -96,6 +95,7 @@ public class AccountController {
         getAccountInfo();
 
     }
+
     public void getAccountInfo() {
         for (Account account : accountList) {
             System.out.println(account.toString());
@@ -116,7 +116,7 @@ public class AccountController {
         }
     }
 
-    // Phương thức ghi danh sach san pham hien co vao file nhi phan
+    // Phương thức ghi danh sach account hiện có vào file nhị phân
     public static void writeToFile(String path, List<Account> accountList) {
         try {
             FileOutputStream fos = new FileOutputStream(path);
@@ -129,6 +129,7 @@ public class AccountController {
         }
     }
 
+    // Phương thức ghi danh sach accountHistory hiện có vào file nhị phân
     public static void writeToFile2(String path, List<AccountHistory> accountHistoryList) {
         try {
             FileOutputStream fos = new FileOutputStream(path);
@@ -140,7 +141,6 @@ public class AccountController {
             e.printStackTrace();
         }
     }
-
 
     // Lấy danh sách account trong file nhị phân
     public static List<Account> readDataFromFile(String path) {
@@ -156,7 +156,6 @@ public class AccountController {
         }
         return accounts;
     }
-
 
     // 3. Hàm sửa thông tin Account theo id
     public void editAccount() {
@@ -184,7 +183,8 @@ public class AccountController {
         writeToFile("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\account.txt", accountList);
 
     }
-    // 4. Hàm xóa thông tin account theo id // còn AccountHistory
+
+    // 4. Hàm xóa thông tin account theo id
     public void deleteAccount() {
         System.out.println("Nhap id account can xoa: ");
         int id = scanner.nextInt();
@@ -199,9 +199,27 @@ public class AccountController {
         }
         if (accountDelete != null) {
             accountList.remove(accountDelete);
-        }
-        else {
+        } else {
             System.out.println("ID khong ton tai");
+        }
+
+        System.out.println("Danh sach account sau khi xoa:");
+        getAccountInfo();
+
+        // Ghi thông tin vào file
+        writeToFile("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\account.txt", accountList);
+    }
+
+    // 4.1 Hàm xóa thông tin AccountHistory theo id
+    public void deleteAccountHistory() {
+        System.out.println("Nhap id accountHistory can xoa: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i = 0; i < accountHistoryList.size(); i++) {
+            if (accountHistoryList.get(i).getID() == id) {
+                accountHistoryList.remove(accountHistoryList.get(i));
+            }
         }
 
         System.out.println("Danh sach account sau khi xoa:");
@@ -224,6 +242,7 @@ public class AccountController {
             }
         }
     }
+
     // 6. Hàm sắp xếp theo tên
     public void sortAccountByName() {
         Collections.sort(accountList, new SortAccountByName());
@@ -232,7 +251,6 @@ public class AccountController {
 
     // 7. Chức năng trừ tiền, check tiền trong tài khoản có đủ không?
     // (đưa vào AccountHistory) (Lưu tất cả thông tin vào file) (xử lý synchronized)
-    // synchronized method
     public synchronized void deductionAccount() {
         System.out.println("Nhap ten account can tru tien: ");
         scanner.nextLine();
@@ -248,15 +266,11 @@ public class AccountController {
                 scanner.nextLine();
                 System.out.println("Nhap mo ta: ");
                 String description = scanner.nextLine();
-
                 System.out.println("Da tru tien account thanh cong");
 
                 // đưa vào AccountHistory
                 AccountHistory accountHistory = new AccountHistory();
                 int accountId = accountList.get(i).getId();
-//                scanner.nextLine();
-//                System.out.println("Nhap mo ta: ");
-//                String description = scanner.nextLine();
                 accountHistory.setAccountId(accountId);
                 accountHistory.setType(deduction);
                 accountHistory.setAmount(newAmount);
@@ -264,20 +278,15 @@ public class AccountController {
                 accountHistoryList.add(accountHistory);
 
                 accountList.get(i).setAccountHistoryList(accountHistoryList);
-
                 getAccountInfo();
-
             }
         }
-
         // Ghi thông tin vào file accountHistory.txt
         writeToFile2("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\accountHistory.txt", accountHistoryList);
-
     }
 
     // 8. Chức năng cộng tiền (đưa vào AccountHistory).
-    //      (Lưu tất cả thông tin vào file) (xử lý synchronized)
-    public synchronized void  addMoney() {
+    public synchronized void addMoney() {
         System.out.println("Nhap ten account can cong tien: ");
         scanner.nextLine();
         String name = scanner.nextLine();
@@ -291,16 +300,12 @@ public class AccountController {
 
                 scanner.nextLine();
                 System.out.println("Nhap mo ta: ");
-
                 String description = scanner.nextLine();
                 System.out.println("Da cong tien account thanh cong");
 
                 // đưa vào AccountHistory
                 AccountHistory accountHistory = new AccountHistory();
                 int accountId = accountList.get(i).getId();
-//                scanner.nextLine();
-//                System.out.println("Nhap mo ta: ");
-//                String description = scanner.nextLine();
                 accountHistory.setAccountId(accountId);
                 accountHistory.setType(addAmount);
                 accountHistory.setAmount(newAmount);
@@ -310,9 +315,7 @@ public class AccountController {
 
                 // !!!!!!!!!!!!chú ý thêm đoạn này...
                 accountList.get(i).setAccountHistoryList(accountHistoryList);
-
                 getAccountInfo();
-
             }
         }
         // Ghi thông tin vào file accountHistory.txt
