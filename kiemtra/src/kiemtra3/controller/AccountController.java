@@ -198,12 +198,15 @@ public class AccountController {
     // 5. Hàm tìm kiếm theo tên
     public void searchAccountByName() {
         System.out.println("Nhap ten account can tim kiem: ");
-        String name = scanner.nextLine();
         scanner.nextLine();
+        String name = scanner.nextLine();
 
         for (int i = 0; i < accountList.size(); i++) {
+            System.out.println(accountList.get(i).getId());
+            System.out.println(accountList.get(i).getFullName());
+
             if (accountList.get(i).getFullName().equalsIgnoreCase(name)) {
-                System.out.println(accountList.get(i)); // !!!!!!!
+                System.out.println("Ket qua tim search1: " + accountList.get(i));
             }
         }
     }
