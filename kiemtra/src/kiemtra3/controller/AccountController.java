@@ -1,6 +1,7 @@
 package kiemtra3.controller;
 
 import kiemtra3.model.Account;
+import kiemtra3.model.AccountHistory;
 import kiemtra3.view.ViewAccount;
 
 import java.io.*;
@@ -16,6 +17,7 @@ public class AccountController {
     // property
     private ViewAccount view = new ViewAccount();
     List<Account> accountList = new ArrayList<Account>();
+    List<AccountHistory> accountHistoryList = new ArrayList<AccountHistory>();
 
     // constructor
 
@@ -128,6 +130,19 @@ public class AccountController {
         }
     }
 
+    public static void writeToFile2(String path, List<AccountHistory> accountHistoryList) {
+        try {
+            FileOutputStream fos = new FileOutputStream(path);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(accountHistoryList);
+            oos.close();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     // Lấy danh sách account trong file nhị phân
     public static List<Account> readDataFromFile(String path) {
         List<Account> accounts = new ArrayList<>();
@@ -166,7 +181,7 @@ public class AccountController {
                 getAccountInfo();
             }
         }
-        // Ghi account vào file
+        // Ghi thông tin vào file
         writeToFile("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\account.txt", accountList);
 
     }
@@ -193,7 +208,7 @@ public class AccountController {
         System.out.println("Danh sach account sau khi xoa:");
         getAccountInfo();
 
-        // Ghi account vào file
+        // Ghi thông tin vào file
         writeToFile("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\account.txt", accountList);
     }
 
@@ -217,7 +232,9 @@ public class AccountController {
     }
 
     // 7. Chức năng trừ tiền, check tiền trong tài khoản có đủ không?
-    public void deductionAccount() {
+    // (đưa vào AccountHistory) (Lưu tất cả thông tin vào file) (xử lý synchronized)
+    // synchronized method
+    public synchronized void deductionAccount() {
         System.out.println("Nhap ten account can tru tien: ");
         scanner.nextLine();
         String name = scanner.nextLine();
@@ -230,13 +247,30 @@ public class AccountController {
                 accountList.get(i).setAmount(newAmount);
                 System.out.println("Da tru tien account thanh cong");
                 getAccountInfo();
+
+                // đưa vào AccountHistory
+                AccountHistory accountHistory = new AccountHistory();
+                int accountId = accountList.get(i).getId();
+                scanner.nextLine();
+                System.out.println("Nhap mo ta: ");
+                String description = scanner.nextLine();
+                accountHistory.setAccountId(accountId);
+                accountHistory.setType(deduction);
+                accountHistory.setAmount(newAmount);
+                accountHistory.setDescription(description);
+
+                accountHistoryList.add(accountHistory);
             }
         }
+
+        // Ghi thông tin vào file accountHistory.txt
+        writeToFile2("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\accountHistory.txt", accountHistoryList);
+
     }
 
     // 8. Chức năng cộng tiền (đưa vào AccountHistory).
     //      (Lưu tất cả thông tin vào file) (xử lý synchronized)
-    public void addMoney() {
+    public synchronized void  addMoney() {
         System.out.println("Nhap ten account can cong tien: ");
         scanner.nextLine();
         String name = scanner.nextLine();
@@ -249,10 +283,22 @@ public class AccountController {
                 accountList.get(i).setAmount(newAmount);
                 System.out.println("Da cong tien account thanh cong");
                 getAccountInfo();
+
+                // đưa vào AccountHistory
+                AccountHistory accountHistory = new AccountHistory();
+                int accountId = accountList.get(i).getId();
+                scanner.nextLine();
+                System.out.println("Nhap mo ta: ");
+                String description = scanner.nextLine();
+                accountHistory.setAccountId(accountId);
+                accountHistory.setType(addAmount);
+                accountHistory.setAmount(newAmount);
+                accountHistory.setDescription(description);
+
+                accountHistoryList.add(accountHistory);
             }
         }
-
+        // Ghi thông tin vào file accountHistory.txt
+        writeToFile2("D:\\workplace\\java_fresher\\java_vss\\kiemtra\\src\\kiemtra3\\accountHistory.txt", accountHistoryList);
     }
-
-
 }

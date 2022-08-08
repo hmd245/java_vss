@@ -1,26 +1,37 @@
 package kiemtra3.model;
 
-public class AccountHistory {
+import java.io.Serializable;
+
+public class AccountHistory implements Serializable {
     // property
     static int create;
-    private int ID;
+    private int IdHistory;
     private int accountId;
-    boolean type;
+    //boolean type;
+    double type;
     private double amount;
     private String description;
 
     // constructor
     public AccountHistory() {
-        ID = create++;
+        IdHistory = create++;
+    }
+
+    public AccountHistory(int accountId, double type, double amount, String description) {
+        IdHistory = create++;
+        this.accountId = accountId;
+        this.type = type;
+        this.amount = amount;
+        this.description = description;
     }
 
     // getter, setter
     public int getID() {
-        return ID;
+        return IdHistory;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setID(int IdHistory) {
+        this.IdHistory = IdHistory;
     }
 
     public int getAccountId() {
@@ -31,11 +42,19 @@ public class AccountHistory {
         this.accountId = accountId;
     }
 
-    public boolean isType() {
+//    public boolean isType() {
+//        return type;
+//    }
+
+//    public void setType(boolean type) {
+//        this.type = type;
+//    }
+
+    public double getType() {
         return type;
     }
 
-    public void setType(boolean type) {
+    public void setType(double type) {
         this.type = type;
     }
 
