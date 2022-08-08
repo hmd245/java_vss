@@ -21,7 +21,6 @@ public class AccountController {
 
     // constructor
 
-
     public AccountController() {
     }
 
@@ -245,21 +244,29 @@ public class AccountController {
                 Double deduction = scanner.nextDouble();
                 Double newAmount = accountList.get(i).getAmount() - deduction;
                 accountList.get(i).setAmount(newAmount);
+
+                scanner.nextLine();
+                System.out.println("Nhap mo ta: ");
+                String description = scanner.nextLine();
+
                 System.out.println("Da tru tien account thanh cong");
-                getAccountInfo();
 
                 // đưa vào AccountHistory
                 AccountHistory accountHistory = new AccountHistory();
                 int accountId = accountList.get(i).getId();
-                scanner.nextLine();
-                System.out.println("Nhap mo ta: ");
-                String description = scanner.nextLine();
+//                scanner.nextLine();
+//                System.out.println("Nhap mo ta: ");
+//                String description = scanner.nextLine();
                 accountHistory.setAccountId(accountId);
                 accountHistory.setType(deduction);
                 accountHistory.setAmount(newAmount);
                 accountHistory.setDescription(description);
-
                 accountHistoryList.add(accountHistory);
+
+                accountList.get(i).setAccountHistoryList(accountHistoryList);
+
+                getAccountInfo();
+
             }
         }
 
@@ -281,21 +288,31 @@ public class AccountController {
                 Double addAmount = scanner.nextDouble();
                 Double newAmount = accountList.get(i).getAmount() + addAmount;
                 accountList.get(i).setAmount(newAmount);
+
+                scanner.nextLine();
+                System.out.println("Nhap mo ta: ");
+
+                String description = scanner.nextLine();
                 System.out.println("Da cong tien account thanh cong");
-                getAccountInfo();
 
                 // đưa vào AccountHistory
                 AccountHistory accountHistory = new AccountHistory();
                 int accountId = accountList.get(i).getId();
-                scanner.nextLine();
-                System.out.println("Nhap mo ta: ");
-                String description = scanner.nextLine();
+//                scanner.nextLine();
+//                System.out.println("Nhap mo ta: ");
+//                String description = scanner.nextLine();
                 accountHistory.setAccountId(accountId);
                 accountHistory.setType(addAmount);
                 accountHistory.setAmount(newAmount);
                 accountHistory.setDescription(description);
 
                 accountHistoryList.add(accountHistory);
+
+                // !!!!!!!!!!!!chú ý thêm đoạn này...
+                accountList.get(i).setAccountHistoryList(accountHistoryList);
+
+                getAccountInfo();
+
             }
         }
         // Ghi thông tin vào file accountHistory.txt
