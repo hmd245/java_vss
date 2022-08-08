@@ -14,17 +14,19 @@ public class StudentController implements interfaceStudent {
     public static Scanner scanner = new Scanner(System.in);
 
     // property
-    public ViewStudent view = new ViewStudent();
+    private ViewStudent view = new ViewStudent();
     List<ClassRoom> classRoomList = new ArrayList<ClassRoom>();
     public static List<Student> studentList = new ArrayList<Student>();
 
     //constructor
     public StudentController(ViewStudent view) {
-        //???!!!
-        // this.view = view;
+         this.view = view;
     }
 
-    // check is number !!!!!!!!!!!!!
+    public StudentController() {
+    }
+
+// check is number !!!!!!!!!!!!!
 
     ClassRoom room1 = new ClassRoom("1A", "Nguyen Thi Huyen");
     ClassRoom room2 = new ClassRoom("1B", "Nguyen Thi Thom");
@@ -81,7 +83,7 @@ public class StudentController implements interfaceStudent {
 
     }
 
-    // Nhap hoc sinh vavo lop
+    // Nhap hoc sinh vao lop
     public void setStudentInfo() throws ParseException {
         System.out.println("Danh sach lop: ");
         for (ClassRoom classRoom : classRoomList) {
