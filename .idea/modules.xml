@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/day2/bai tap/Snt nho hon 100/Snt nho hon 100.iml" filepath="$PROJECT_DIR$/day2/bai tap/Snt nho hon 100/Snt nho hon 100.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/bai tap/bai tap.iml" filepath="$PROJECT_DIR$/day1/bai tap/bai tap.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/body_mass_index/body_mass_index.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/body_mass_index/body_mass_index.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/count_date_in_month/count_date_in_month.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/count_date_in_month/count_date_in_month.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/declare_operator/declare_operator.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/declare_operator/declare_operator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/declare_variable/declare_variable.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/declare_variable/declare_variable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day2/bai tap/display_prime/display_prime.iml" filepath="$PROJECT_DIR$/day2/bai tap/display_prime/display_prime.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day2/bai tap/hien_thi_hinh/hien_thi_hinh.iml" filepath="$PROJECT_DIR$/day2/bai tap/hien_thi_hinh/hien_thi_hinh.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_vss.iml" filepath="$PROJECT_DIR$/.idea/java_vss.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day2/thuc hanh/kiem_tra_snt/kiem_tra_snt.iml" filepath="$PROJECT_DIR$/day2/thuc hanh/kiem_tra_snt/kiem_tra_snt.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/leap_year/leap_year.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/leap_year/leap_year.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/linear_equation_resolver/linear_equation_resolver.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/linear_equation_resolver/linear_equation_resolver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day2/thuc hanh/menu_ung_dung/menu_ung_dung.iml" filepath="$PROJECT_DIR$/day2/thuc hanh/menu_ung_dung/menu_ung_dung.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/system_time/system_time.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/system_time/system_time.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day1/thuc hanh/test_day1/test_day1.iml" filepath="$PROJECT_DIR$/day1/thuc hanh/test_day1/test_day1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day3/thuchanh/thuchanh.iml" filepath="$PROJECT_DIR$/day3/thuchanh/thuchanh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day2/thuc hanh/tien_lai_cho_vay/tien_lai_cho_vay.iml" filepath="$PROJECT_DIR$/day2/thuc hanh/tien_lai_cho_vay/tien_lai_cho_vay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day2/thuc hanh/uoc_chung_lon_nhat/uoc_chung_lon_nhat.iml" filepath="$PROJECT_DIR$/day2/thuc hanh/uoc_chung_lon_nhat/uoc_chung_lon_nhat.iml" />
     </modules>
   </component>
 </project>

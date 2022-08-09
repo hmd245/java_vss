@@ -13,6 +13,15 @@
       <sourceFolder url="file://$MODULE_DIR$/day10/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day9/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day11/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/bai tap/Snt nho hon 100/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/bai tap/display_prime/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/bai tap/hien_thi_hinh/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/thuc hanh/kiem_tra_snt/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/thuc hanh/menu_ung_dung/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/thuc hanh/tien_lai_cho_vay/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day2/thuc hanh/uoc_chung_lon_nhat/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day3/baitap/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day3/thuchanh/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
