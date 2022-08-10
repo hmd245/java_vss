@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/day2/thuc hanh/uoc_chung_lon_nhat/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day3/baitap/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day3/thuchanh/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day12/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
