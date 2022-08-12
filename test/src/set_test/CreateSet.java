@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class CreateSet {
-      class Animal{
+    class Animal{
 
     }
     public static void main(String[] args) {
