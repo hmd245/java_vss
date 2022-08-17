@@ -26,7 +26,7 @@
       <sourceFolder url="file://$MODULE_DIR$/day13/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/day14/src" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="18" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

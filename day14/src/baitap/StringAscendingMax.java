@@ -7,15 +7,11 @@ public class StringAscendingMax {
 
 
     public static void main(String[] args) {
-        int[] a = {1,3,4,2,7,5,6};    // luu gia tri ngau nhien cua n
+        int[] a = {1,3,4,2,7,5,6,1,2,3,4,5,6};    // luu gia tri ngau nhien cua n
         //int[] a = {12, 3, 5, 11, 15};    // luu gia tri ngau nhien cua n
         int[] l = new int[100];    // do dai tot nhat tai thoi diem i
 
-        int[] b = new int[100];
-
-        //Scanner scanner = new Scanner(System.in);
-        //System.out.println("Nhap vao chuoi: ");
-        //String inputString = scanner.nextLine();
+        int[] b = new int[100]; // sử dụng làm map
 
         // buoc co so quy hoach dong
         l[0] = 1;
@@ -24,7 +20,7 @@ public class StringAscendingMax {
         // quy hoach dong
         for (int i = 1; i < a.length; i++) {
             lmax = 0;
-            int jmax = 0;
+            int jmax = -1;
             // Tim so nho hon tai thoi diem a[i]
             for (int j = 0; j < i; j++) {
                 if (a[i] > a[j]) {
@@ -68,7 +64,7 @@ public class StringAscendingMax {
                 Max = i;
             }
         }
-        System.out.println();
+        System.out.println("\nMax: " + Max);
 
         int[] daoNguoc = new int[a.length];
         while (true) {
@@ -77,7 +73,8 @@ public class StringAscendingMax {
             daoNguoc[i] = a[i];
             Max = b[i];
             if (b[Max] == 0) {
-                System.out.println(a[Max] + "\t");
+                //System.out.println(a[Max] + "\t");
+                System.out.println("");
                 daoNguoc[i - 1] = a[Max];
                 break;
             }
